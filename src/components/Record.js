@@ -11,7 +11,6 @@ import {
   FaMicrophoneAltSlash
 } from "react-icons/fa";
 import mic from "microphone-stream";
-import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 
 import RecordingEditor from "./Recording-Editor";
 import { createNote } from "../graphql/mutations";
@@ -159,16 +158,13 @@ export default props => {
             }
           }}
         >
-          <MDBTable striped>
-            <MDBTableHead>
+          <table>
               <tr>
                 <th>#</th>
                 <th>First</th>
                 <th>Last</th>
                 <th>Handle</th>
               </tr>
-            </MDBTableHead>
-            <MDBTableBody>
               <tr>
                 <td>1</td>
                 <td>Mark</td>
@@ -187,8 +183,7 @@ export default props => {
                 <td>the Bird</td>
                 <td>@twitter</td>
               </tr>
-            </MDBTableBody>
-          </MDBTable>
+          </table>
         </div>
       </div>
       {showRecordingEditor && (
