@@ -91,7 +91,7 @@ export default () => {
   return (
     <>
       <Header>
-        <Title>Quick Notes</Title>
+        <Title>VotesApp</Title>
         <SignOutButton
           onClick={() => {
             Auth.signOut().then(() => window.location.reload());
@@ -102,15 +102,15 @@ export default () => {
       </Header>
       <StyledTabs index={tabIndex} onChange={index => setTabIndex(index)}>
         <StyledTabList>
-          <StyledTab>Notes</StyledTab>
-          <StyledTab>Record</StyledTab>
+          <StyledTab>Vote</StyledTab>
+          <StyledTab>Ranking</StyledTab>
         </StyledTabList>
         <StyledTabPanels>
           <StyledTabPanel>
-            {tabIndex === 0 && <Notes setTabIndex={setTabIndex} />}
+            {tabIndex === 0 && <Vote setTabIndex={setTabIndex} />}
           </StyledTabPanel>
           <StyledTabPanel>
-            {tabIndex === 1 && <Record setTabIndex={setTabIndex} />}
+            {tabIndex === 1 && <Ranking setTabIndex={setTabIndex} />}
           </StyledTabPanel>
         </StyledTabPanels>
       </StyledTabs>
