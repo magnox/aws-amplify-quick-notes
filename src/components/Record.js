@@ -11,6 +11,44 @@ import {
   FaMicrophoneAltSlash
 } from "react-icons/fa";
 import mic from "microphone-stream";
+import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
+
+const BasicTable = () => {
+  return (
+    <MDBTable striped>
+      <MDBTableHead>
+        <tr>
+          <th>#</th>
+          <th>First</th>
+          <th>Last</th>
+          <th>Handle</th>
+        </tr>
+      </MDBTableHead>
+      <MDBTableBody>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </MDBTableBody>
+    </MDBTable>
+  );
+}
+
+export default BasicTable;
 
 import RecordingEditor from "./Recording-Editor";
 import { createNote } from "../graphql/mutations";
@@ -158,25 +196,7 @@ export default props => {
             }
           }}
         >
-          {isConverting ? (
-            <FaMicrophoneAltSlash
-              size={50}
-              style={{ margin: "auto" }}
-              color="#f4f9f4"
-            />
-          ) : isRecording ? (
-            <FaMicrophone
-              size={50}
-              style={{ margin: "auto" }}
-              color="#f4f9f4"
-            />
-          ) : (
-            <FaMicrophoneAlt
-              size={50}
-              style={{ margin: "auto" }}
-              color="#f4f9f4"
-            />
-          )}
+          BasicTable()
         </div>
       </div>
       {showRecordingEditor && (
