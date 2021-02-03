@@ -119,66 +119,37 @@ export default props => {
           height: 420px;
         `}
       >
-        <div
-          css={[
-            css`
-              width: 100%;
-              height: 100%;
-              top: 0;
-              left: 0;
-              position: absolute;
-
-              border-radius: 50%;
-              background-color: #74b49b;
-            `,
-            isRecording || isConverting
-              ? css`
-                  animation: ${pulse} 1.5s ease infinite;
-                `
-              : {}
-          ]}
-        />
-        <div
+        <table
           css={css`
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            position: absolute;
-          `}
-        >
-
-          <table
-            css={css`
-            tr:nth-child(even) {background-color: #f2f2f2;}
+            tr:nth-child(even) {background-color: #e2e2e2;}
+            tr:nth-child(odd) {background-color: #c2c2c2;}
         `}
-          >
-            <tr>
-              <th>#</th>
-              <th>First</th>
-              <th>Last</th>
-              <th>Handle</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </table>
-        </div>
+        >
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </table>
       </div>
       {showRecordingEditor && (
         <RecordingEditor
