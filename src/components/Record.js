@@ -115,8 +115,8 @@ export default props => {
           position: relative;
           justify-content: center;
           align-items: center;
-          width: 120px;
-          height: 120px;
+          width: 420px;
+          height: 420px;
         `}
       >
         <div
@@ -145,44 +145,38 @@ export default props => {
             top: 0;
             left: 0;
             position: absolute;
-            border-radius: 50%;
-            background-color: #74b49b;
-            display: flex;
-            cursor: pointer;
           `}
-          onClick={() => {
-            if (!isRecording) {
-              startRecording();
-            } else {
-              stopRecording();
-            }
-          }}
         >
-          <table>
-              <tr>
-                <th>#</th>
-                <th>First</th>
-                <th>Last</th>
-                <th>Handle</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
+
+          <table
+            css={css`
+            tr:nth-child(even) {background-color: #f2f2f2;}
+        `}
+          >
+            <tr>
+              <th>#</th>
+              <th>First</th>
+              <th>Last</th>
+              <th>Handle</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
           </table>
         </div>
       </div>
