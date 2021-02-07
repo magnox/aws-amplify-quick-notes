@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
-import { FaRegEdit, FaPlay, FaRegTrashAlt, FaStar } from "react-icons/fa";
+import { FaRegEdit, FaPlay, FaRegTrashAlt, FaStar, FaLaughWink } from "react-icons/fa";
 import { Predictions } from "aws-amplify";
 
 import RecordingEditor from "./Recording-Editor";
@@ -97,10 +97,10 @@ export default props => {
       <Divider />
       <NoteActions>
         <Icon>
-          <FaPlay />
+        <FaLaughWink />&nbsp;&nbsp;FAKE
         </Icon>
         <Icon>
-          ECHT <FaStar />
+        <FaStar />&nbsp;&nbsp;ECHT
         </Icon>
       </NoteActions>
     </Note>
