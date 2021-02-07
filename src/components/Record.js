@@ -130,6 +130,7 @@ export default props => {
             border-width: 1px;
             border-color: #3A3A3A;
             border-collapse: collapse;
+            width:420px;
            
             th {
               border-width: 1px;
@@ -153,28 +154,44 @@ export default props => {
         `}
         >
           <tr>
-            <th>#</th>
-            <th>First</th>
-            <th>Last</th>
-            <th>Handle</th>
+            <th>Rang</th>
+            <th>1</th>
+            <th>2</th>
+            <th>2</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>6</th>
+            <th>6</th>
+            <th>9</th>
+            <th>10</th>
           </tr>
           <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>Name</td>
+            <td>Winnie Wilson</td>
+            <td>Dominique Dedios</td>
+            <td>Lonny Lu</td>
+            <td>Gaston Gunning</td>
+            <td>Melanie Muldrow</td>
+            <td>Bryon Basilio</td>
+            <td>Oliver Odegard</td>
+            <td>Daisey Duggins</td>
+            <td>Arnita Andrus</td>
+            <td>Ben Bibeau</td>
           </tr>
           <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
+            <td>Punkte</td>
+            <td>12</td>
+            <td>11</td>
+            <td>11</td>
+            <td>10</td>
+            <td>8</td>
+            <td>7</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
             <td>3</td>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
+            <td>0</td>
           </tr>
         </table>
       </div>
