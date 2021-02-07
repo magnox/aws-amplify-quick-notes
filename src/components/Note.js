@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
-import { FaRegEdit, FaPlay, FaRegTrashAlt } from "react-icons/fa";
+import { FaRegEdit, FaPlay, FaRegTrashAlt, FaStar } from "react-icons/fa";
 import { Predictions } from "aws-amplify";
 
 import RecordingEditor from "./Recording-Editor";
@@ -91,6 +91,21 @@ export default props => {
   return (
     <Note>
       <Info>
+        <Title>Tag 12</Title>
+        {/* <Text>{props.text}</Text> */}
+      </Info>
+      <Divider />
+      <NoteActions>
+        <Icon onClick={}>
+          <FaPlay />
+        </Icon>
+        <Icon onClick={}>
+          ECHT <FaStar />
+        </Icon>
+      </NoteActions>
+    </Note>
+    /* <Note>
+      <Info>
         <Title>{props.title}</Title>
         <Text>{props.text}</Text>
       </Info>
@@ -117,6 +132,6 @@ export default props => {
           onSave={props.onSaveChanges}
         />
       )}
-    </Note>
+    </Note> */
   );
 };
