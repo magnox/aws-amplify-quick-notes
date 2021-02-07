@@ -96,10 +96,10 @@ export default props => {
       </Info>
       <Divider />
       <NoteActions>
-        <Icon onClick={}>
+        <Icon>
           <FaPlay />
         </Icon>
-        <Icon onClick={}>
+        <Icon>
           ECHT <FaStar />
         </Icon>
       </NoteActions>
