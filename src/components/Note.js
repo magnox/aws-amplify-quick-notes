@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import { FaRegEdit, FaPlay, FaRegTrashAlt, FaStar, FaLaughWink } from "react-icons/fa";
 import { Predictions } from "aws-amplify";
-import day10 from './day10.png';
+import day10 from 'day10.png';
 
 import RecordingEditor from "./Recording-Editor";
 
