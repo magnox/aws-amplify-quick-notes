@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import { FaRegEdit, FaPlay, FaRegTrashAlt, FaStar, FaLaughWink } from "react-icons/fa";
 import { Predictions } from "aws-amplify";
-import day10 from 'day10.png';
 
 import RecordingEditor from "./Recording-Editor";
 
@@ -94,7 +93,7 @@ export default props => {
       <Info>
         <Title>Tag 12</Title>
         {/* <Text>{props.text}</Text> */}
-        <img src="{day10}" />
+        <img src="day10.png" />
       </Info>
       <Divider />
       <NoteActions>
