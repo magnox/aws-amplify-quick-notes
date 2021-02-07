@@ -124,16 +124,14 @@ export default props => {
             tr:nth-child(even) {background-color: #e2e2e2;}
             tr:nth-child(odd) {background-color: #c2c2c2;}
 
-            table {
-              font-family: verdana, arial, sans-serif;
-              font-size: 11px;
-              color: #333333;
-              border-width: 1px;
-              border-color: #3A3A3A;
-              border-collapse: collapse;
-            }
+            font-family: verdana, arial, sans-serif;
+            font-size: 11px;
+            color: #333333;
+            border-width: 1px;
+            border-color: #3A3A3A;
+            border-collapse: collapse;
            
-            table th {
+            th {
               border-width: 1px;
               padding: 8px;
               border-style: solid;
@@ -141,11 +139,11 @@ export default props => {
               background-color: #B2CFD8;
             }
            
-            table tr:hover td {
+            tr:hover td {
               background-color: #DFEBF1;
             }
            
-            table td {
+            td {
               border-width: 1px;
               padding: 8px;
               border-style: solid;
