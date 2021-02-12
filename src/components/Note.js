@@ -21,6 +21,7 @@ const Title = styled("h2")`
   color: #74b49b;
   margin-top: 0;
   margin-bottom: 8px;
+  text-align: center;
 `;
 
 const Text = styled("p")`
@@ -93,7 +94,8 @@ export default props => {
       <Info>
         <Title>Tag 12</Title>
         {/* <Text>{props.text}</Text> */}
-        <img src="day10.png" />
+        <br/>
+        <img style="margin:auto;" width="380" src="day10.png" />
       </Info>
       <Divider />
       <NoteActions>
