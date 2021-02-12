@@ -95,7 +95,7 @@ export default props => {
         <Title>Tag 12</Title>
         {/* <Text>{props.text}</Text> */}
         <br/>
-        <img style="margin:auto;" width="380" src="day10.png" />
+        <img width="380" src="day10.png" />
       </Info>
       <Divider />
       <NoteActions>
