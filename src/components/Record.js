@@ -155,42 +155,62 @@ export default props => {
         >
           <tr>
             <th>Rang</th>
-            <th>1</th>
-            <th>2</th>
-            <th>2</th>
-            <th>4</th>
-            <th>5</th>
-            <th>6</th>
-            <th>6</th>
-            <th>6</th>
-            <th>9</th>
-            <th>10</th>
+            <th>Name</th>
+            <th>Punkte</th>
           </tr>
           <tr>
-            <td>Name</td>
+            <td>1</td>
             <td>Winnie Wilson</td>
-            <td>Dominique Dedios</td>
-            <td>Lonny Lu</td>
-            <td>Gaston Gunning</td>
-            <td>Melanie Muldrow</td>
-            <td>Bryon Basilio</td>
-            <td>Oliver Odegard</td>
-            <td>Daisey Duggins</td>
-            <td>Arnita Andrus</td>
-            <td>Ben Bibeau</td>
+            <td>12</td>
           </tr>
           <tr>
-            <td>Punkte</td>
-            <td>12</td>
+            <td>2</td>
+            <td>Dominique Dedios</td>
             <td>11</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Lonny Lu</td>
             <td>11</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Gaston Gunning</td>
             <td>10</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Melanie Muldrow</td>
             <td>8</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Bryon Basilio</td>
             <td>7</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Oliver Odegard</td>
             <td>5</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Daisey Duggins</td>
             <td>5</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Arnita Andrus</td>
             <td>5</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Jeremiah Jaime</td>
             <td>3</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Ben Bibeau</td>
             <td>0</td>
           </tr>
         </table>
