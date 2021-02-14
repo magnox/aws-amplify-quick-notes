@@ -173,10 +173,10 @@ export default props => {
             <td>Lonny Lu</td>
             <td>11</td>
           </tr>
-          <tr>
-            <td>4</td>
-            <td>Gaston Gunning</td>
-            <td>10</td>
+          <tr style="background-color: #ccc;">
+            <td><b>4</b></td>
+            <td><b>Gaston Gunning</b></td>
+            <td><b>10</b></td>
           </tr>
           <tr>
             <td>5</td>
