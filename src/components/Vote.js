@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import { FaStar, FaLaughWink } from "react-icons/fa";
 
-const Note = styled("div")`
+const Vote = styled("div")`
   background-color: #ffffff;
   border-radius: 4px;
   margin-bottom: 24px;
@@ -59,7 +59,7 @@ export default () => {
   const [] = useState(false);
 
   return (
-    <Note>
+    <Vote>
       <Info>
         <Title>Tag 12</Title>
         {/* <Text>{props.text}</Text> */}
@@ -75,6 +75,6 @@ export default () => {
         <FaStar />&nbsp;&nbsp;ECHT
         </Icon>
       </NoteActions>
-    </Note>
+    </Vote>
   );
 };

@@ -4,8 +4,8 @@ import { Auth } from "aws-amplify";
 import { Button } from "@rebass/emotion";
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 
-import Notes from "./Notes";
-import Record from "./Record";
+import Votes from "./Votes";
+import Ranking from "./Ranking";
 
 const Header = styled("div")`
   background-color: #ffffff;
@@ -107,10 +107,10 @@ export default () => {
         </StyledTabList>
         <StyledTabPanels>
           <StyledTabPanel>
-            {tabIndex === 0 && <Notes setTabIndex={setTabIndex} />}
+            {tabIndex === 0 && <Votes setTabIndex={setTabIndex} />}
           </StyledTabPanel>
           <StyledTabPanel>
-            {tabIndex === 1 && <Record setTabIndex={setTabIndex} />}
+            {tabIndex === 1 && <Ranking setTabIndex={setTabIndex} />}
           </StyledTabPanel>
         </StyledTabPanels>
       </StyledTabs>

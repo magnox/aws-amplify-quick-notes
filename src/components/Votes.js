@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { API, graphqlOperation } from "aws-amplify";
 import styled from "@emotion/styled";
 
-import Note from "./Note";
+import Vote from "./Vote";
 import { listNotes } from "../graphql/queries";
 import { updateNote, deleteNote } from "../graphql/mutations";
 
@@ -33,7 +33,7 @@ export default () => {
   return (
     <Container>
       {notes.map(note => (
-        <Note
+        <Vote
           key={note.id}
           {...note}
           onSaveChanges={async values => {
