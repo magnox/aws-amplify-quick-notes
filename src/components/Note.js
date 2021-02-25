@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
-import { FaRegEdit, FaPlay, FaRegTrashAlt, FaStar, FaLaughWink } from "react-icons/fa";
-import { Predictions } from "aws-amplify";
-
-import RecordingEditor from "./Recording-Editor";
+import { FaStar, FaLaughWink } from "react-icons/fa";
 
 const Note = styled("div")`
   background-color: #ffffff;
@@ -22,11 +19,6 @@ const Title = styled("h2")`
   margin-top: 0;
   margin-bottom: 8px;
   text-align: center;
-`;
-
-const Text = styled("p")`
-  color: #74b49b;
-  margin-top: 0;
 `;
 
 const Icon = styled("button")`
@@ -63,31 +55,8 @@ const Info = styled.div`
   padding: 24px;
 `;
 
-export default props => {
-  const [showEditor, setShowEditor] = useState(false);
-
-  const playAudio = async () => {
-    const result = await Predictions.convert({
-      textToSpeech: {
-        source: {
-          text: props.text
-        }
-      }
-    });
-
-    const audioCtx = new AudioContext();
-    const source = audioCtx.createBufferSource();
-
-    audioCtx.decodeAudioData(
-      result.audioStream,
-      buffer => {
-        source.buffer = buffer;
-        source.connect(audioCtx.destination);
-        source.start(0);
-      },
-      error => console.log(error)
-    );
-  };
+export default () => {
+  const [] = useState(false);
 
   return (
     <Note>
@@ -107,34 +76,5 @@ export default props => {
         </Icon>
       </NoteActions>
     </Note>
-    /* <Note>
-      <Info>
-        <Title>{props.title}</Title>
-        <Text>{props.text}</Text>
-      </Info>
-      <Divider />
-      <NoteActions>
-        <Icon onClick={() => playAudio()}>
-          <FaPlay />
-        </Icon>
-        <Icon onClick={() => setShowEditor(true)}>
-          <FaRegEdit />
-        </Icon>
-        <Icon>
-          <FaRegTrashAlt onClick={props.onDelete} />
-        </Icon>
-      </NoteActions>
-
-      {showEditor && (
-        <RecordingEditor
-          title={props.title}
-          text={props.text}
-          onDismiss={() => {
-            setShowEditor(false);
-          }}
-          onSave={props.onSaveChanges}
-        />
-      )}
-    </Note> */
   );
 };

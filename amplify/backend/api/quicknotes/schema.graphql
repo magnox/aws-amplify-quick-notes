@@ -1,3 +1,12 @@
+type Vote @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  title: String!
+  imageResource: String!
+  day: Date!
+  createdAt: String
+  updatedAt: String
+}
+
 type Note @model @auth(rules: [{ allow: owner }]) {
   id: ID!
   title: String!

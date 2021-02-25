@@ -2,15 +2,8 @@
 
 import React, { useState } from "react";
 import { API, graphqlOperation } from "aws-amplify";
-import { Predictions } from "aws-amplify";
 import { keyframes, css, jsx } from "@emotion/core";
 import styled from "@emotion/styled";
-import {
-  FaMicrophone,
-  FaMicrophoneAlt,
-  FaMicrophoneAltSlash
-} from "react-icons/fa";
-import mic from "microphone-stream";
 
 import RecordingEditor from "./Recording-Editor";
 import { createNote } from "../graphql/mutations";
@@ -23,25 +16,10 @@ const Container = styled("div")`
   align-items: center;
 `;
 
-const pulse = keyframes`
-  0% {
-    transform: scale(1);
-    opacity: 0.3;
-  }
-
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-`;
-
 export default props => {
-  const [isRecording, setIsRecording] = useState(false);
   const [showRecordingEditor, setShowRecordingEditor] = useState(false);
   const [recordingText, setRecordingText] = useState("");
-  const [isConverting, setIsConverting] = useState("");
-  const [micStream, setMicStream] = useState();
-  const [audioBuffer] = useState(
+  const [] = useState(
     (function() {
       let buffer = [];
       function add(raw) {
@@ -66,47 +44,6 @@ export default props => {
       };
     })()
   );
-
-  const startRecording = async () => {
-    const stream = await window.navigator.mediaDevices.getUserMedia({
-      video: false,
-      audio: true
-    });
-    const startMic = new mic();
-
-    startMic.setStream(stream);
-    startMic.on("data", chunk => {
-      var raw = mic.toRaw(chunk);
-      if (raw == null) {
-        return;
-      }
-      audioBuffer.addData(raw);
-    });
-
-    setMicStream(startMic);
-    setIsRecording(true);
-  };
-
-  const stopRecording = async () => {
-    micStream.stop();
-    setIsRecording(false);
-    setIsConverting(true);
-
-    const buffer = audioBuffer.getData();
-    const result = await Predictions.convert({
-      transcription: {
-        source: {
-          bytes: buffer
-        }
-      }
-    });
-
-    setMicStream(null);
-    audioBuffer.reset();
-    setRecordingText(result.transcription.fullText);
-    setIsConverting(false);
-    setShowRecordingEditor(true);
-  };
 
   return (
     <Container>
