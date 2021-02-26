@@ -2,7 +2,7 @@ type Vote @model @auth(rules: [{ allow: owner }]) {
   id: ID!
   title: String!
   imageResource: String!
-  day: Date!
+  day: String!
   createdAt: String
   updatedAt: String
 }
