@@ -3,8 +3,8 @@ import { API, graphqlOperation } from "aws-amplify";
 import styled from "@emotion/styled";
 
 import Vote from "./Vote";
-import { listNotes } from "../graphql/queries";
-import { updateNote, deleteNote } from "../graphql/mutations";
+import { listNotes as listVotes } from "../graphql/queries";
+import { updateNote as updateVote, deleteNote as deleteVote } from "../graphql/mutations";
 
 const Container = styled("div")`
   max-width: 800px;
@@ -13,13 +13,13 @@ const Container = styled("div")`
 `;
 
 export default () => {
-  const [notes, setNotes] = useState([]);
+  const [votes, setVotes] = useState([]);
 
   useEffect(() => {
-    const fetchNotes = async () => {
-      const result = await API.graphql(graphqlOperation(listNotes));
+    const fetchVotes = async () => {
+      const result = await API.graphql(graphqlOperation(listVotes));
 
-      setNotes(
+      setVotes(
         result.data.listNotes.items.sort((a, b) => {
           if (a.updatedAt > b.updatedAt) return -1;
           else return 1;
@@ -27,41 +27,41 @@ export default () => {
       );
     };
 
-    fetchNotes();
+    fetchVotes();
   }, []);
 
   return (
     <Container>
-      {notes.map(note => (
+      {votes.map(vote => (
         <Vote
-          key={note.id}
-          {...note}
+          key={vote.id}
+          {...vote}
           onSaveChanges={async values => {
             const result = await API.graphql(
-              graphqlOperation(updateNote, {
+              graphqlOperation(updateVote, {
                 input: {
-                  ...note,
+                  ...vote,
                   ...values
                 }
               })
             );
 
-            setNotes(
-              notes.map(n => {
-                return n.id === note.id ? result.data.updateNote : n;
+            setVotes(
+              votes.map(n => {
+                return n.id === vote.id ? result.data.updateNote : n;
               })
             );
           }}
           onDelete={async () => {
             const result = await API.graphql(
-              graphqlOperation(deleteNote, {
+              graphqlOperation(deleteVote, {
                 input: {
-                  id: note.id
+                  id: vote.id
                 }
               })
             );
 
-            setNotes(notes.filter(n => n.id !== note.id));
+            setVotes(votes.filter(n => n.id !== vote.id));
           }}
         />
       ))}
